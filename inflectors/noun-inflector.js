@@ -5,11 +5,11 @@ function NounInflector(options) {
   this.engine = new natural.NounInflector();
 };
 
-NounInflector.prototype.pluralize = function(token) {
+NounInflector.prototype.pluralize = function(token, i, tokens) {
   return this.engine.pluralize(token);
 };
 
-NounInflector.prototype.singularize = function(token) {
+NounInflector.prototype.singularize = function(token, i, tokens) {
   return this.engine.singularize(token);
 };
 

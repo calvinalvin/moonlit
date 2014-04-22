@@ -4,7 +4,7 @@ function Soundex(options) {
   options = options || {};
 };
 
-Soundex.prototype.process = function(token) {
+Soundex.prototype.process = function(token, i, tokens) {
   return natural.SoundEx.process(token);
 };
 

@@ -4,7 +4,7 @@ function Metaphone(options) {
   options = options || {};
 };
 
-Metaphone.prototype.process = function(token) {
+Metaphone.prototype.process = function(token, i, tokens) {
   return natural.Metaphone.process(token);
 };
 
