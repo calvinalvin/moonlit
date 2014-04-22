@@ -8,13 +8,13 @@ var natural = require('natural');
 
 function Trigrams(options) {
   options = options || {};
-  this.engine = natural.NGrams;
 };
 
 Trigrams.prototype.tokenize = function (str) {
   var tokens = [];
-  var grams = this.engine.trigrams(str);
+  var grams = natural.NGrams.trigrams(str);
   grams.forEach(function(set, i) {
+    tokens[i] = "";
   	set.forEach(function(el, j) {
   	  tokens[i] += el + ' ';
   	});

@@ -8,13 +8,13 @@ var natural = require('natural');
 
 function Bigrams(options) {
   options = options || {};
-  this.engine = natural.NGrams;
 };
 
 Bigrams.prototype.tokenize = function (str) {
   var tokens = [];
-  var grams = this.engine.bigrams(str);
+  var grams = natural.NGrams.bigrams(str);
   grams.forEach(function(set, i) {
+    tokens[i] = "";
   	set.forEach(function(el, j) {
   	  tokens[i] += el + ' ';
   	});
